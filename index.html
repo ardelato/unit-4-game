@@ -1,59 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Crystals Collector</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crystals Collector</title>
 
-		<link rel="stylesheet" href="assets/css/reset.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="assets/javascript/game.js"></script>
-	</head>
-	<body>
-		<div class="collectorBanner"><h1>Crystals Collector!</h1></div>
-		<div class="instructionsContainer">
-			<p>You will be given a random number at the start of the game.</p>
-			<p>
-				There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-				total score.
-			</p>
-			<p>
-				You win the game by matching your total score to random number, you lose the game if your total score
-				goes above the random number.
-			</p>
-			<p>
-				The value of each crystal is hidden from you until you click on it.
-			</p>
-			<p>Each time when the game starts, the game will change the values of each crystal.</p>
-		</div>
-		<div class="gameStatsContainer">
-			<div class="pointGoal"><h1>39</h1></div>
-			<div class="winLoss">
-				<p id="wins">Wins: 0</p>
-				<p id="losses">Losses: 0</p>
-			</div>
-		</div>
-		<div class="crystalImgContainer">
-			<div class="imgContainer">
-				<img value="red" src="assets/images/red crystal.png" alt="red crystal" class="crystals" />
-			</div>
-			<div class="imgContainer">
-				<img value="blue" src="assets/images/blue crystal.png" alt="blue crystal" class="crystals" />
-			</div>
-			<div class="imgContainer">
-				<img value="yellow" src="assets/images/yellow crystal.png" alt="yellow crystal" class="crystals" />
-			</div>
-			<div class="imgContainer">
-				<img value="green" src="assets/images/green crystal.png" alt="green crystal" class="crystals" />
-			</div>
-		</div>
-		<div class="scoreContainer">
-			<div class="scoreLabel">
-				<p>Your total score is:</p>
-			</div>
-			<div class="totalScore"><h1>0</h1></div>
-		</div>
-	</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+  </head>
+  <body>
+    <div class="collectorBanner"><h1>Crystals Collector!</h1></div>
+    <div class="instructionsContainer">
+      <p>You will be given a random number at the start of the game.</p>
+      <p>
+        There are four crystals below. By clicking on a crystal you will add a
+        specific amount of points to your total score.
+      </p>
+      <p>
+        You win the game by matching your total score to random number, you lose
+        the game if your total score goes above the random number.
+      </p>
+      <p>
+        The data-image-type of each crystal is hidden from you until you click
+        on it.
+      </p>
+      <p>
+        Each time when the game starts, the game will change the
+        data-image-types of each crystal.
+      </p>
+    </div>
+    <div class="gameStatsContainer">
+      <div class="pointGoal"><h1>39</h1></div>
+      <div class="winLoss">
+        <p id="wins">Wins: 0</p>
+        <p id="losses">Losses: 0</p>
+      </div>
+    </div>
+    <div class="crystalImgContainer">
+      <div class="imgContainer">
+        <img
+          data-image-type="red"
+          src="assets/images/red crystal.png"
+          alt="red crystal"
+          class="crystals"
+        />
+      </div>
+      <div class="imgContainer">
+        <img
+          data-image-type="blue"
+          src="assets/images/blue crystal.png"
+          alt="blue crystal"
+          class="crystals"
+        />
+      </div>
+      <div class="imgContainer">
+        <img
+          data-image-type="yellow"
+          src="assets/images/yellow crystal.png"
+          alt="yellow crystal"
+          class="crystals"
+        />
+      </div>
+      <div class="imgContainer">
+        <img
+          data-image-type="green"
+          src="assets/images/green crystal.png"
+          alt="green crystal"
+          class="crystals"
+        />
+      </div>
+    </div>
+    <div class="scoreContainer">
+      <div class="scoreLabel">
+        <p>Your total score is:</p>
+      </div>
+      <div class="totalScore"><h1>0</h1></div>
+    </div>
+  </body>
 </html>
