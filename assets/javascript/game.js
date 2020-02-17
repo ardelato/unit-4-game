@@ -16,14 +16,19 @@ function randomNumberGoal() {
 
 // Crystals will have a random value assigned to them, between 1-12
 function randomNumberCrystal() {
-  return Math.floor(Math.random() * 12) + 1;
+  var numArray = [];
+  while (numArray.length !== 4) {
+    var tempNum = Math.floor(Math.random() * 12) + 1;
+    if (!numArray.includes(tempNum)) numArray.push(tempNum);
+  }
+  setCrystalValues(numArray);
 }
 
-function setCrystalValue() {
-  redVal = randomNumberCrystal();
-  blueVal = randomNumberCrystal();
-  yellowVal = randomNumberCrystal();
-  greenVal = randomNumberCrystal();
+function setCrystalValues(numArray) {
+  redVal = numArray[0];
+  blueVal = numArray[1];
+  yellowVal = numArray[2];
+  greenVal = numArray[3];
 }
 
 //Game restarts in either a win or a loss
@@ -34,8 +39,7 @@ function reset() {
   $("#wins").text("Wins: " + wins);
   $("#losses").text("Losses: " + losses);
   $(".totalScore").html("<h1>" + currentScore + "</h1>");
-
-  setCrystalValue();
+  randomNumberCrystal();
 }
 
 function updateGame(crystalValue) {
