@@ -56,23 +56,17 @@ $(window).on("load", function() {
   reset();
 
   $(".crystals").on("click", function() {
-    console.log("Clicked something");
-    console.log("Value: " + $(this).data("image-type"));
     switch ($(this).data("image-type")) {
       case "red":
-        console.log("Red Value: " + redVal);
         updateGame(redVal);
         break;
       case "blue":
-        console.log("Blue Value: " + blueVal);
         updateGame(blueVal);
         break;
       case "yellow":
-        console.log("Yellow Value: " + yellowVal);
         updateGame(yellowVal);
         break;
       case "green":
-        console.log("Green Value: " + greenVal);
         updateGame(greenVal);
         break;
     }
