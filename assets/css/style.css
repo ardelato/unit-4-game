@@ -1,7 +1,119 @@
 html { 
-    background: url(images/bg.jpg) no-repeat center center fixed; 
+    background: url(../images/bg.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
+
+body{
+    margin: 0 auto;
+    width: 960px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.collectorBanner{
+    text-align: center;
+    background-color: lightcoral;
+    color: white;
+    margin-bottom: 10px; 
+}
+
+.collectorBanner h1{
+    padding: 20px;
+    font-size: 50px;
+}
+
+.instructionsContainer {
+    background-color: lightgoldenrodyellow;
+    color: gray;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.instructionsContainer p{
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.gameStatsContainer{
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pointGoal {
+    background-color: lightgreen;
+    color: rgb(33, 34, 37);
+    flex: 1;
+    padding: 10px;
+}
+
+.pointGoal h1{
+    font-size: 45px;
+    margin: 10px;
+}
+
+.winLoss{
+    background-color: lightskyblue;
+    color: rgb(33, 34, 37);
+    flex: 1;
+    padding: 10px;
+}
+
+.winLoss p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.crystalImgContainer{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.imgContainer{
+    background-color: white;
+    width: 25%;
+    margin: 10px;
+}
+
+.imgContainer img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.crystalImgContainer .imgContainer:hover{
+    background-color: wheat;
+}
+
+.scoreContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: teal;
+    color: white;
+    width: 50%;
+}
+.scoreLabel{
+    flex:1;
+    background-color: teal;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.totalScore{
+    flex: 1;
+    background-color: teal;
+    color: white;
+    padding: 20px;
+}
+
+.totalScore h1{
+    font-size: 45px;
+}
