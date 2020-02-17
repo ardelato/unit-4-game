@@ -84,6 +84,7 @@ body{
     height: 200px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .crystalImgContainer .imgContainer:hover{
@@ -104,7 +105,6 @@ body{
     background-color: teal;
     color: white;
     font-size: 18px;
-    
 }
 
 .totalScore{
