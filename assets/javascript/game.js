@@ -1,8 +1,13 @@
-// Logic
 var redVal;
 var blueVal;
 var yellowVal;
 var greenVal;
+
+var currentScore = 0;
+var goal;
+
+var wins = 0;
+var losses = 0;
 
 // Random number will be shown - pointGoal - between 19-120;
 function randomNumberGoal() {
@@ -23,8 +28,27 @@ function setCrystalValue() {
 
 //Game restarts in either a win or a loss
 function reset() {
-  $(".pointGoal").html("<h1>" + randomNumberGoal() + "</h1>");
+  goal = randomNumberGoal();
+  currentScore = 0;
+  $(".pointGoal").html("<h1>" + goal + "</h1>");
+  $("#wins").text("Wins: " + wins);
+  $("#losses").text("Losses: " + losses);
+  $(".totalScore").html("<h1>" + currentScore + "</h1>");
+
   setCrystalValue();
+}
+
+function updateGame(crystalValue) {
+  currentScore += crystalValue;
+  if (currentScore > goal) {
+    losses++;
+    reset();
+  } else if (currentScore === goal) {
+    wins++;
+    reset();
+  } else {
+    $(".totalScore").html("<h1>" + currentScore + "</h1>");
+  }
 }
 
 //When the player clicks on a crystal, it will add a specific amount of points to the total score
@@ -37,18 +61,20 @@ $(window).on("load", function() {
     switch ($(this).data("image-type")) {
       case "red":
         console.log("Red Value: " + redVal);
+        updateGame(redVal);
         break;
       case "blue":
         console.log("Blue Value: " + blueVal);
+        updateGame(blueVal);
         break;
       case "yellow":
         console.log("Yellow Value: " + yellowVal);
+        updateGame(yellowVal);
         break;
       case "green":
         console.log("Green Value: " + greenVal);
+        updateGame(greenVal);
         break;
     }
   });
 });
-
-//If the total score matches the random number, the player wins, else if they go over they lose
